@@ -8,4 +8,4 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 3) Prison Cells After N days 
   * 4) < Ugly Number II >
   * 5) Hamming Distance
-  
+  * 6) Plus One 
