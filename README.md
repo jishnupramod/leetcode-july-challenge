@@ -10,4 +10,5 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 5) Hamming Distance
   * 6) Plus One
   * 7) Island Perimeter
-  * 8) 3Sum 
+  * 8) 3Sum
+  * 9) Maximum Width of Binary Tree 
