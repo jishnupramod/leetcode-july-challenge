@@ -59,6 +59,8 @@ Note: Answer will in the range of 32-bit signed integer.
 */
 
 
+
+// Recursive Version
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -85,6 +87,53 @@ public:
         int width = 0;
         unordered_map<int, ull> leftmost;
         getwidth(root, 0, 0, width, leftmost);
+        return width;
+    }
+};
+
+
+// Iterative Version
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+private:
+    typedef unsigned long long ull;
+    void bfs(TreeNode* root, int& wid) {
+        deque<pair<TreeNode*, ull>> q;
+        q.push_back(make_pair(root, 1));
+        int genPop = 1, start, end = 0;
+        ull pos;
+        while (!q.empty()) {
+            if (genPop == 0) {
+                genPop = q.size();
+                start = q.front().second;
+                end = q.back().second;
+                wid = max(wid, end-start+1);
+            }
+            TreeNode* node = q.front().first;
+            pos = q.front().second;
+            q.pop_front();
+            --genPop;
+            if (node->left)
+                q.push_back(make_pair(node->left, pos * 2));
+            if (node->right)
+                q.push_back(make_pair(node->right, pos * 2 + 1));
+        }
+    }
+public:
+    int widthOfBinaryTree(TreeNode* root) {
+        if (!root) return 0;
+        int width = 1;
+        bfs(root, width);
         return width;
     }
 };
