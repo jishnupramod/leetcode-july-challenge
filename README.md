@@ -13,4 +13,5 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 8) 3Sum
   * 9) Maximum Width of Binary Tree
   * 10) Flatten a Multilevel Doubly Linked List
-  * 11) Subsets 
+  * 11) Subsets
+  * 12) Reverse Bits 
