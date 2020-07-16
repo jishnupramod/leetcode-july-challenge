@@ -17,4 +17,5 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 12) Reverse Bits
   * 13) Same Tree
   * 14) Angle Between Hands of a Clock
-  * 15) Reverse Words in a String 
+  * 15) Reverse Words in a String
+  * 16) Pow(x, n) 
