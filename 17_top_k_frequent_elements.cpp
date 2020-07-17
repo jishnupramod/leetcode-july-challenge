@@ -40,3 +40,45 @@ public:
         return res;
     }
 };
+
+
+// Solution using heap
+class Solution {
+private:
+    unordered_map<int, int> mp;
+    int extract_max(vector<int>& nums) {
+        int max = nums[0];
+        nums[0] = nums.back();
+        nums.pop_back();
+        max_heapify(nums, 0);
+        return max;
+    }
+    void max_heapify(vector<int>& nums, int i) {
+        int l = 2*i;
+        int r = 2*i+1;
+        int most_common;
+        if (l < nums.size() and mp[nums[l]] > mp[nums[i]])
+            most_common = l;
+        else
+            most_common = i;
+        if (r < nums.size() and mp[nums[r]] > mp[nums[most_common]])
+            most_common = r;
+        if (i != most_common) {
+            swap(nums[i], nums[most_common]);
+            max_heapify(nums, most_common);
+        }
+    }
+public:
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        for (int i : nums) ++mp[i];
+        set<int> s;
+        for (int i : nums) s.insert(i);
+        vector<int> A(s.begin(), s.end()), ans(k);
+        int n = A.size();
+        for (int i=n/2; i>=0; --i)
+            max_heapify(A, i);
+        for (int i=0; i<k; ++i) 
+            ans[i] = extract_max(A);
+        return ans;
+    }
+};
