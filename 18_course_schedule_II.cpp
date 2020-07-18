@@ -55,3 +55,33 @@ public:
         return order;
     }
 };
+
+
+// Using queue and Topological sorting
+class Solution {
+public:
+    vector<int> findOrder(int n, vector<vector<int>>& prerequisites) {
+        vector<int> indegree(n, 0), order;
+        unordered_map<int, vector<int>> outdegree;
+        for (vector<int> edge : prerequisites) {
+            indegree[edge[0]]++;
+            outdegree[edge[1]].push_back(edge[0]);
+        }
+        queue<int> q;
+        for (int i=0; i<n; ++i)
+            if (indegree[i] == 0) 
+                q.push(i);
+        while (!q.empty()) {
+            int node = q.front();
+            q.pop();
+            order.push_back(node);
+            for (int i : outdegree[node]) {
+                if (--indegree[i] == 0)
+                    q.push(i);
+            }
+        }
+        if (order.size() != n)
+            return {};
+        return order;
+    }
+};
