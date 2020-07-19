@@ -20,4 +20,5 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 15) Reverse Words in a String
   * 16) Pow(x, n)
   * 17) Top K Frequent Elements
-  * 18) Course Schedule II 
+  * 18) Course Schedule II
+  * 19) Add Binary 
