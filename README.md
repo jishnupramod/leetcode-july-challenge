@@ -22,4 +22,5 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 17) Top K Frequent Elements
   * 18) Course Schedule II
   * 19) Add Binary
-  * 20) Remove Linked List Elements 
+  * 20) Remove Linked List Elements
+  * 21) Word Search 
