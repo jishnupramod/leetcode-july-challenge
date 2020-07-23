@@ -28,3 +28,23 @@ public:
         return ans;
     }
 };
+
+// Without using extra space - Pure bit manipulation
+class Solution {
+public:
+    vector<int> singleNumber(vector<int>& nums) {
+        int a = 0;
+        for (int i : nums)
+            a ^= i;
+        vector<int> ans(2, 0);
+        // finding the last set bit
+        a &= -a;
+        for (int i : nums) {
+            if (i & a)
+                ans[0] ^= i;
+            else
+                ans[1] ^= i;
+        }
+        return ans;
+    }
+};
