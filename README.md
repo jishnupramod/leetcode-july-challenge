@@ -24,4 +24,5 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 19) Add Binary
   * 20) Remove Linked List Elements
   * 21) Word Search
-  * 22) Binary Tree Zigzag Level Order Traversal 
+  * 22) Binary Tree Zigzag Level Order Traversal
+  * 23) Single Number III 
