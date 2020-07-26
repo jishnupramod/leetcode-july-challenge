@@ -26,4 +26,5 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 21) Word Search
   * 22) Binary Tree Zigzag Level Order Traversal
   * 23) Single Number III
-  * 24) All Paths From Source to Target 
+  * 24) All Paths From Source to Target
+  * 25) Add Digits 
