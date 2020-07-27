@@ -27,4 +27,6 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 22) Binary Tree Zigzag Level Order Traversal
   * 23) Single Number III
   * 24) All Paths From Source to Target
-  * 25) Add Digits 
+  * 25) < Find Minimum in Rotated Sorted Array >
+  * 26) Add Digits
+  * 27) Construct Binary Tree from Inorder and Postorder Traversal 
