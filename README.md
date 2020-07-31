@@ -30,4 +30,9 @@ The solution repository for the Leetcode July Daily Challenge 2020
   * 25) < Find Minimum in Rotated Sorted Array >
   * 26) Add Digits
   * 27) Construct Binary Tree from Inorder and Postorder Traversal
-  * 28) Task Scheduler 
+  * 28) Task Scheduler
+  * 29) < Best Time to Buy and Sell Stock with Cooldown >
+  * 30) < Word Break II >
+  * 31) Climbing Stairs  
+
+  Nb:- Problem within < > ==> To be added soon  
